@@ -17,5 +17,5 @@
     <button style="float: right; color: #c9d1d9; background-color: #21262d; border: none; padding: 5px 10px; cursor: pointer; border-radius: 5px; margin-left: 10px">preview</button>
     </a>
   </div>
-  <img src="./project-snapshots/rock-paper-scissor.png" style="padding: 10px; width: 30vw ;">
+  <img src="./project-snapshots/rock-paper-scissor-1.png" style="padding: 10px; width: 30vw ;">
 </ol>
