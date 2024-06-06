@@ -55,7 +55,21 @@ body {
   margin-bottom: 40px;
 }
 
-.reset-button {
+.reset-button{
   display: flex;
   justify-content: center;
+}
+
+.auto-play{
+  background-color: white;
+  border: none;
+  font-size: 15px;
+  padding: 10px 15px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.stop-play {
+  background-color: red;
+  color: white ;
 }

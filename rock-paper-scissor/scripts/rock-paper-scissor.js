@@ -1,4 +1,3 @@
-
 let score = JSON.parse(localStorage.getItem('score')) || {
   wins: 0,
   losses: 0,
@@ -6,6 +5,32 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 };
 
 updateScore();
+
+let isAutoPlaying = false;
+let intervalId;
+function autoPlay(){
+  if (!isAutoPlaying){
+    intervalId = setInterval(() =>{
+      let playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 1000)
+
+    isAutoPlaying = true;
+  }else {
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+  }
+  let autoPlayElement = document.querySelector('.auto-play');
+if (isAutoPlaying == true ){
+  autoPlayElement.innerText = 'Stop';
+  autoPlayElement.classList.add('stop-play');
+}else {
+  autoPlayElement.innerText = 'Auto Play';
+  autoPlayElement.classList.remove('stop-play');
+}
+}
+
+
 
 function reset() {
   score.wins = 0;
